@@ -1,6 +1,18 @@
-function isEnoughCapacity(paraproducts, containerSizems) {}
+function isEnoughCapacity(paraproducts, containerSizems) {
+  let sumEl = 0;
+  let arrValues = Object.values(paraproducts);
 
-//*===================================================================
+  for (const el of arrValues) {
+    sumEl += el;
+  }
+
+  if (sumEl <= containerSizems) {
+    return true;
+  }
+  return false;
+}
+
+//*===============================================================================
 
 console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
 
